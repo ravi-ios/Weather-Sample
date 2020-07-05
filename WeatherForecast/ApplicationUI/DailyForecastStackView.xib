@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="IvL-co-bIV" customClass="DailyForecastStackView" customModule="Weatherforecasting" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="779" height="317"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zes-ad-CIB">
+                    <rect key="frame" x="0.0" y="0.0" width="779" height="1"/>
+                    <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="qeE-fN-kis"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rQN-Yn-3i8">
+                    <rect key="frame" x="15" y="0.0" width="749" height="317"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4n7-ZK-QSp" userLabel="Left Forecast View" customClass="DailyForecastView" customModule="Weatherforecasting" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="369.5" height="317"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ges-Jn-Ucz" userLabel="Right Forecast View" customClass="DailyForecastView" customModule="Weatherforecasting" customModuleProvider="target">
+                            <rect key="frame" x="379.5" y="0.0" width="369.5" height="317"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="zes-ad-CIB" firstAttribute="leading" secondItem="JB8-pZ-b3x" secondAttribute="leading" id="Auv-yP-hd5"/>
+                <constraint firstAttribute="trailing" secondItem="rQN-Yn-3i8" secondAttribute="trailing" constant="15" id="G6R-kq-g0L"/>
+                <constraint firstItem="zes-ad-CIB" firstAttribute="top" secondItem="IvL-co-bIV" secondAttribute="top" id="WaZ-JU-L8c"/>
+                <constraint firstItem="rQN-Yn-3i8" firstAttribute="leading" secondItem="IvL-co-bIV" secondAttribute="leading" constant="15" id="YaY-XW-6FZ"/>
+                <constraint firstAttribute="bottom" secondItem="rQN-Yn-3i8" secondAttribute="bottom" id="aNk-kt-7ah"/>
+                <constraint firstItem="rQN-Yn-3i8" firstAttribute="top" secondItem="IvL-co-bIV" secondAttribute="top" id="gMY-Ca-Dap"/>
+                <constraint firstItem="JB8-pZ-b3x" firstAttribute="trailing" secondItem="zes-ad-CIB" secondAttribute="trailing" id="zbv-gQ-gB3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="JB8-pZ-b3x"/>
+            <connections>
+                <outlet property="leftView" destination="4n7-ZK-QSp" id="cBm-s7-8V4"/>
+                <outlet property="rightView" destination="ges-Jn-Ucz" id="CRO-69-1ml"/>
+            </connections>
+            <point key="canvasLocation" x="-412.31884057971018" y="-131.58482142857142"/>
+        </view>
+    </objects>
+</document>
