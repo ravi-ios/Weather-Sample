@@ -63,6 +63,7 @@
 		6944CE6324B1DA6600E9FBA4 /* WeeklyForecastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeeklyForecastView.xib; sourceTree = "<group>"; };
 		6944CE6524B1DA7100E9FBA4 /* DailyForecastStackView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyForecastStackView.xib; sourceTree = "<group>"; };
 		6944CE6724B1DA7D00E9FBA4 /* DailyForecastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyForecastView.xib; sourceTree = "<group>"; };
+		695CE35424B208D200711019 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		696284BD24B1CB3400C665F6 /* WeatherForecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherForecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		696284C024B1CB3400C665F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		696284C224B1CB3400C665F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +121,7 @@
 		696284B424B1CB3400C665F6 = {
 			isa = PBXGroup;
 			children = (
+				695CE35424B208D200711019 /* README.md */,
 				696284BF24B1CB3400C665F6 /* WeatherForecast */,
 				696284D624B1CB3500C665F6 /* WeatherForecastTests */,
 				696284BE24B1CB3400C665F6 /* Products */,
