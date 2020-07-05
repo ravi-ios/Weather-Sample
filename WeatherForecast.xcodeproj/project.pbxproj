@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		696284C124B1CB3400C665F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696284C024B1CB3400C665F6 /* AppDelegate.swift */; };
 		696284C324B1CB3400C665F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696284C224B1CB3400C665F6 /* SceneDelegate.swift */; };
-		696284C524B1CB3400C665F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696284C424B1CB3400C665F6 /* ViewController.swift */; };
+		696284C524B1CB3400C665F6 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696284C424B1CB3400C665F6 /* ForecastViewController.swift */; };
 		696284C824B1CB3400C665F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696284C624B1CB3400C665F6 /* Main.storyboard */; };
 		696284CA24B1CB3500C665F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 696284C924B1CB3500C665F6 /* Assets.xcassets */; };
 		696284CD24B1CB3500C665F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696284CB24B1CB3500C665F6 /* LaunchScreen.storyboard */; };
@@ -30,7 +30,7 @@
 		696284BD24B1CB3400C665F6 /* WeatherForecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherForecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		696284C024B1CB3400C665F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		696284C224B1CB3400C665F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		696284C424B1CB3400C665F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		696284C424B1CB3400C665F6 /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		696284C724B1CB3400C665F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		696284C924B1CB3500C665F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		696284CC24B1CB3500C665F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			children = (
 				696284C024B1CB3400C665F6 /* AppDelegate.swift */,
 				696284C224B1CB3400C665F6 /* SceneDelegate.swift */,
-				696284C424B1CB3400C665F6 /* ViewController.swift */,
+				696284C424B1CB3400C665F6 /* ForecastViewController.swift */,
 				696284C624B1CB3400C665F6 /* Main.storyboard */,
 				696284C924B1CB3500C665F6 /* Assets.xcassets */,
 				696284CB24B1CB3500C665F6 /* LaunchScreen.storyboard */,
@@ -200,7 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				696284C524B1CB3400C665F6 /* ViewController.swift in Sources */,
+				696284C524B1CB3400C665F6 /* ForecastViewController.swift in Sources */,
 				696284C124B1CB3400C665F6 /* AppDelegate.swift in Sources */,
 				696284C324B1CB3400C665F6 /* SceneDelegate.swift in Sources */,
 			);
@@ -364,6 +364,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeatherForecast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -371,7 +372,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.RavikumarCHINTAKAYALA.WeatherForecast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -381,6 +382,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeatherForecast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -388,7 +390,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.RavikumarCHINTAKAYALA.WeatherForecast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
