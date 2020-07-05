@@ -19,7 +19,6 @@
 		696284C824B1CB3400C665F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696284C624B1CB3400C665F6 /* Main.storyboard */; };
 		696284CA24B1CB3500C665F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 696284C924B1CB3500C665F6 /* Assets.xcassets */; };
 		696284CD24B1CB3500C665F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696284CB24B1CB3500C665F6 /* LaunchScreen.storyboard */; };
-		696284D824B1CB3500C665F6 /* WeatherForecastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696284D724B1CB3500C665F6 /* WeatherForecastTests.swift */; };
 		696284E924B1CD6900C665F6 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696284E824B1CD6900C665F6 /* APIClient.swift */; };
 		696284EB24B1CD8200C665F6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696284EA24B1CD8200C665F6 /* Endpoint.swift */; };
 		696284ED24B1CD9600C665F6 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696284EC24B1CD9600C665F6 /* Forecast.swift */; };
@@ -73,7 +72,6 @@
 		696284CC24B1CB3500C665F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		696284CE24B1CB3500C665F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		696284D324B1CB3500C665F6 /* WeatherForecastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherForecastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		696284D724B1CB3500C665F6 /* WeatherForecastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastTests.swift; sourceTree = "<group>"; };
 		696284D924B1CB3500C665F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		696284E824B1CD6900C665F6 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		696284EA24B1CD8200C665F6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -159,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				6962850024B1D11E00C665F6 /* TestForecast.json */,
-				696284D724B1CB3500C665F6 /* WeatherForecastTests.swift */,
 				696284D924B1CB3500C665F6 /* Info.plist */,
 				696284FA24B1CE9300C665F6 /* APIClientTests.swift */,
 				696284FC24B1CEA900C665F6 /* EndpointTests.swift */,
@@ -173,11 +170,11 @@
 			isa = PBXGroup;
 			children = (
 				696284C624B1CB3400C665F6 /* Main.storyboard */,
+				696284C424B1CB3400C665F6 /* ForecastViewController.swift */,
 				6944CE5F24B1DA3F00E9FBA4 /* DailyForecastStackView.swift */,
 				6944CE6524B1DA7100E9FBA4 /* DailyForecastStackView.xib */,
 				6944CE5D24B1DA2F00E9FBA4 /* DailyForecastView.swift */,
 				6944CE6724B1DA7D00E9FBA4 /* DailyForecastView.xib */,
-				696284C424B1CB3400C665F6 /* ForecastViewController.swift */,
 				6982B25B24B1DD96008E519E /* HourlyForecastCollectionView.swift */,
 				6982B25D24B1DDB6008E519E /* HourlyForecastCollectionViewCell.swift */,
 				6944CE6124B1DA5300E9FBA4 /* WeeklyForecastView.swift */,
@@ -376,7 +373,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				696284D824B1CB3500C665F6 /* WeatherForecastTests.swift in Sources */,
 				696284FD24B1CEA900C665F6 /* EndpointTests.swift in Sources */,
 				696284FB24B1CE9300C665F6 /* APIClientTests.swift in Sources */,
 				696284FF24B1CFBF00C665F6 /* MockURLProtocol.swift in Sources */,
@@ -532,7 +528,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WeatherForecast/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -541,6 +538,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.RavikumarCHINTAKAYALA.WeatherForecast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -550,7 +548,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WeatherForecast/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -559,6 +558,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.RavikumarCHINTAKAYALA.WeatherForecast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

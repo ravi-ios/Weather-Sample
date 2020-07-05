@@ -14,7 +14,14 @@ class ForecastViewController: UIViewController {
     // MARK: - Private Members
     
     private let forecastService = ForecastService()
-
+    
+    private var userLocation: CLLocation? {
+        didSet {
+            guard let userLocation = userLocation else { return }
+            LocationService.shared.getAddress(userLocation) { self.cityLabel.text = $0 }
+        }
+    }
+    
     private lazy var locationManager: CLLocationManager = {
         let locationManager = CLLocationManager()
         locationManager.delegate = self;
@@ -27,7 +34,8 @@ class ForecastViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.startUpdatingLocation()
+        
+        configureLocationService()
     }
     
     // MARK: - IBOutlets
@@ -38,11 +46,39 @@ class ForecastViewController: UIViewController {
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     
+    @IBOutlet weak var refreshButton: UIButton!
+    
+    // MARK: - IBActions
+    
+    @IBAction func refreshButtonTouchUpInside(_ sender: UIButton) {
+        guard let userLocation = userLocation else { return }
+        
+        loadWeatherData(userLocation)
+    }
+    
     // MARK: - Private Methods
     
+    private func configureLocationService() {
+        locationManager.startUpdatingLocation()
+        
+        guard CLLocationManager.locationServicesEnabled() else {
+            NavigationService.shared.showAlert(message: "Location services not enabled")
+            return
+        }
+        
+        switch CLLocationManager.authorizationStatus() {
+        case .notDetermined, .restricted, .denied:
+            NavigationService.shared.showAlert(message: "Please allow access to location services in settings")
+        default: break
+        }
+    }
+    
     private func loadWeatherData(_ location: CLLocation) {
+        refreshButton.isEnabled = false
         forecastService.getForecastData(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude) { [weak self] result, error in
             guard let self = self else { return }
+            
+            defer { self.refreshButton.isEnabled = true }
             
             guard error == nil else {
                 NavigationService.shared.showAlert(message: error?.localizedDescription ?? "Sorry, some thing went wrong")
@@ -50,8 +86,6 @@ class ForecastViewController: UIViewController {
             }
             
             guard let result = result else { return }
-            
-            LocationService.shared.getAddress(location) { self.cityLabel.text = $0 }
             
             self.updateUI(result)
         }
@@ -65,7 +99,7 @@ class ForecastViewController: UIViewController {
             stackView.removeArrangedSubview($0)
             $0.removeFromSuperview()
         }
-            
+        
         if let oneWeekWeather = weatherData.daily?.data {
             oneWeekWeather.forEach{ stackView.addArrangedSubview(WeeklyForecastView.instantiate($0)) }
         }
@@ -118,7 +152,9 @@ extension ForecastViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         
+        userLocation = location
+        
         loadWeatherData(location)
     }
-
+    
 }
