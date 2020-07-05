@@ -1,0 +1,60 @@
+{
+   "latitude":19.0176147,
+   "longitude":72.8561644,
+   "timezone":"Asia/Kolkata",
+   "currently":{
+      "time":1593940274,
+      "summary":"Rain and Humid",
+      "icon":"rain",
+      "precipIntensity":1.4667,
+      "precipProbability":0.52,
+      "precipType":"rain",
+      "temperature":29.86,
+      "apparentTemperature":38.05,
+      "dewPoint":26.63,
+      "humidity":0.83,
+      "pressure":1000.4,
+      "windSpeed":9.15,
+      "windGust":13.09,
+      "windBearing":231,
+      "cloudCover":0.96,
+      "uvIndex":5,
+      "visibility":7.804,
+      "ozone":261.7
+   },
+   "daily":{
+      "summary":"Rain throughout the week.",
+      "icon":"rain",
+      "data":[
+         {
+            "time":1593887400,
+            "summary":"Rain and humid throughout the day.",
+            "icon":"rain",
+            "humidity":0.88,
+            "pressure":1001
+         },
+         {
+            "time":1593973800,
+            "summary":"Rain and humid throughout the day.",
+            "icon":"rain",
+            "sunriseTime":1593995880,
+            "sunsetTime":1594043460,
+            "humidity":0.86,
+            "pressure":1000.5,
+            "uvIndex":5
+         }
+      ]
+   },
+   "flags":{
+      "sources":[
+         "cmc",
+         "gfs",
+         "icon",
+         "isd",
+         "madis"
+      ],
+      "nearest-station":7.999,
+      "units":"si"
+   },
+   "offset":5.5
+}
